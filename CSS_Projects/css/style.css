@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "pro";
+  src: url(../fonts/pro_light.ttf);
+}
+@font-face {
+  font-family: "fredo";
+  src: url(../fonts/fredo.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #010020;
+}
+#container {
+  width: 100%;
+  background-color: #010020;
+  aspect-ratio: 2/1;
+}
+#logo {
+  width: 600px;
+  margin: auto;
+  aspect-ratio: 2/1;
+}
+ul {
+  margin: 30px;
+  width: 70%;
+  margin: auto;
+  border-radius: 3em;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+a {
+  text-decoration: none;
+  color: #010020;
+  text-shadow: 2px 2px 0 white, 2px -2px 0 white, -2px 2px 0 white,
+    -2px -2px 0 white, 2px 0px 0 white, 0px 2px 0 white, -2px 0px 0 white,
+    0px -2px 0 white;
+}
+#title {
+  color: #0b96f3;
+  font-family: "fredo";
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-top: -80px;
+  letter-spacing: 0.1em;
+
+}
+
+ul li {
+  font-size: 25px;
+  list-style: none;
+  font-family: "fredo";
+  font-weight: bold;
+  margin-left: -40px;
+  transition: all 0.5s;
+}
+ul li:hover{
+    border: 3px solid white;
+    background: white;
+    padding: 20px 40px;
+    border-radius: 5em;
+}
+#lists{
+    width: 100%;
+}

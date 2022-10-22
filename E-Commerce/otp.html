@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <title>Payment</title>
+  </head>
+  <body>
+    <div id="container">
+      <form>
+        <h2>Final Payment: &#8377;&nbsp;&nbsp;</h2>
+        <label for="card">Card number:</label>
+        <input type="text" name="" id="card" minlength="16" maxlength="16" placeholder="Enter Card Number" required/>
+  
+        <label for="cvv">CVV:</label>
+        <input type="text" name="" id="cvv" minlength="3" maxlength="3" placeholder="Enter CVV" required/>
+  
+        <label for="expiry">Expiry Date:</label>
+        <input type="text" name="" id="expiry" minlength="5" maxlength="5" placeholder="Month/Year" required />
+  
+        <label for="your_name">Your Name:</label>
+        <input type="text" name="" id="your_name" placeholder="Full Name" required/>
+  
+        <input style="width: 100%;" type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+  <script>
+    document.querySelector("h2").innerText+=localStorage.getItem("final_pay")||0;
+    document.querySelector("form").addEventListener("submit", e=>{
+      e.preventDefault();
+      // console.log(e.target[0].value)
+      // console.log(e.target[1].value)
+      // console.log(e.target[2].value)
+      // console.log(e.target[3].value)
+      document.querySelector("#container form:first-child input:last-child").setAttribute('disabled','disabled')
+      let form=document.createElement("form");
+      let input=document.createElement("input");
+      input.placeholder="Enter OTP"
+      let btn=document.createElement("button");
+      btn.innerText="Verify";
+      let h1=document.createElement("h1");
+      let h2=document.createElement("h2");
+      h1.innerText="OTP"
+      
+      
+      form.append(h1);
+      form.addEventListener("submit",x=>{
+        x.preventDefault();
+        if(x.target[0].value=="1234"){
+          h2.innerText="Successfull 👍😍";
+          localStorage.removeItem("final_pay");
+        }else{
+          h2.innerText="Wrong OTP ❌❌";
+        }
+        form.append(h2);
+      })
+      form.append(input,btn);
+      document.querySelector("#container").append(form);
+    })
+  </script>
+</html>

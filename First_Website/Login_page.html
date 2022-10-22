@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="container">
+        <img src="https://sso.masaischool.com/brand_dark.svg" alt="masai_logo">
+        <div>
+            <h3>Login</h3>
+            <form>
+                <label for="mail">Email</label>
+                <input type="email" name="" id="mail"  placeholder="Enter Email Address" required>
+    
+                <label for="pass">Password</label>
+                <input type="password" name="" id="pass"  placeholder="Enter Password" required>
+    
+                <div id="tc" style="visibility:hidden;">By singing up, i accept the masai school <span>Terms of service</span> and acknowledge the <span>Privacy Policy</span> </div>
+                <input style="margin-top: -10px;" type="submit" value="Login">
+            </form>
+            <p>Create a New Account <a href="index.html">SignUp</a></p>
+        </div>
+    
+  </body>
+  <script>
+    document.querySelector("form").addEventListener("submit",creation);
+    function creation(e){
+        e.preventDefault();
+        let mail=e.target[0].value;
+        let pass=e.target[1].value;
+
+        let obj=JSON.parse(localStorage.getItem("userData"));
+        // console.log(obj.email,mail)
+        // console.log(obj.password,pass)
+        if(obj.email==mail && obj.password==pass){
+          alert("✅ Login Successfull 😍");
+          window.location.href = "puppy.html";
+        }else{
+          alert("❌ E-mail or Password is Wrong ❌")
+        }
+    }
+</script>
+</html>

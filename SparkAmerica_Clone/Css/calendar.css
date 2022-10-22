@@ -1,0 +1,32 @@
+#description{
+    width: 80%;
+    margin: auto;
+    padding: 1.5%;
+}
+#year{
+    width: 80%;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 1%;
+    row-gap: 2%;
+    place-items: center;
+    padding-top: 1%;
+    padding-bottom: 4%;
+}
+#year>div{
+    border: 1px solid;
+    padding: 3%;
+    text-align: center;
+    overflow: hidden;
+}
+#year h1{
+    font-size: 30px;
+}
+#year p{
+    font-size: 19px;
+    line-height: 120%;
+}
+#year img{
+    width:95%;
+}

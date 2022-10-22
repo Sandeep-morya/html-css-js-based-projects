@@ -1,0 +1,68 @@
+#container{
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    display: grid;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+#container>h1{
+    grid-column: span 3;
+    border-bottom: 10px solid;
+    margin-bottom: -10px;
+    
+}
+img{
+    width: 110%;
+}
+select{
+    font-size: 20px;
+    padding: 0;
+}
+#container>div{
+    overflow: hidden;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+#container div:first-child{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 10px;
+    gap:10px;
+    grid-column: span 4;
+}
+a{
+    text-decoration: none;
+    color: #111;
+}
+h3{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+h5{
+    font-weight: normal;
+    text-decoration: line-through;
+}
+h4::before{
+    content: "\20B9\0020";
+}
+h5::before{
+    content: "\20B9\0020";
+}
+button{
+    margin-bottom: 10px;
+    padding: 10px 30px;
+    font-size: 18px;
+    border: 2px solid;
+    background-color: white;
+    border-radius: 5em;
+}
+button:active{
+    background-color: black;
+    color: white;
+}
+#list{
+    grid-column: span 4;
+}

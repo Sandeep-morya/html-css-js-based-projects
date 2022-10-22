@@ -1,0 +1,126 @@
+#navbar {
+  width: 100%;
+  margin: auto;
+  height: 70px;
+  margin-bottom: 30px;
+  border-radius: 5rem;
+  position: relative;
+  top: 10px;
+}
+.user {
+  width: 290px;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  left: 30px;
+  justify-content: space-between;
+}
+.user_dp {
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1;
+  background-image: url(./images/user.jpg);
+  background-position: center;
+  background-size: 100%;
+  border-radius: 5rem;
+  box-shadow: 0px 0px 10px 0px #000000bb;
+}
+.user_info {
+  display: flex;
+  flex-direction: column;
+  margin-top:5px;
+}
+.user_name {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgba(255, 255, 255);
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px #000000;
+  cursor: default;
+}
+.user_des {
+  color: rgba(240, 248, 255, 0.8);
+  font-size: 14px;
+  line-height: 20px;
+  text-shadow: 2px 2px 2px #00000049;
+  cursor: default;
+}
+.user_des:hover{
+  color:white;
+}
+.find_f {
+  position: absolute;
+  right: 0;
+  width: 25%;
+  height: 100%;
+}
+
+.search_bar {
+  width: 85%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid white;
+  font-size: 20px;
+  color: white;
+  font-family: "Quicksand";
+  padding: 5px 0 5px 50px;
+  transition: all 0.5s;
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.63) ;
+}
+
+.search_btn {
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  font-size: 18px;
+  top:10%;
+  left:2%;
+  aspect-ratio: 1;
+}
+.search_btn:hover{
+  font-size:20px ;
+  color:orangered;
+}
+.find_f span{
+  position: absolute;
+  font-size: 20px;
+  color:white;
+  top:5%;
+  left:11%
+}
+.search_bar::-webkit-search-cancel-button {
+  appearance: none;
+  height: 24px;
+  width: 24px;
+  filter: brightness(200%);
+  margin-left: 0.4em;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
+  cursor: pointer;
+}
+.contact i{
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: absolute;
+  bottom: -10%;
+}
+.g{left:0%}
+.l{left:15%}
+.f{left:30%}
+.i{left:45%}
+.w{left:60%}
+.t{left:75%}
+
+
+
+
+.g:hover{color:rgb(20, 20, 20);font-size: 35px;}
+.l:hover{color:rgb(0, 81, 255);font-size: 35px;}
+.f:hover{color:blue;font-size: 35px;}
+.w:hover{color:rgb(12, 255, 4);font-size: 35px;}
+.t:hover{color:rgb(0, 183, 255);font-size: 35px;}
+.i:hover{color:rgb(255, 0, 128);font-size: 35px;}
+i{
+  text-shadow: 2px 2px 2px #00000083;
+}

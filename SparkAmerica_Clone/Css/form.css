@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "pro-light";
+  src: url(../Fonts/pro_light.ttf);
+}
+@font-face {
+  font-family: 'thin';
+  src:url('../Fonts/thin.woff') format('woff');
+  }
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow-x: hidden;
+}
+body > img {
+  min-width: 200%;
+  max-width: 250%;
+}
+#content {
+  width: 60%;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  left: 20%;
+}
+#content > img {
+  width: 78%;
+  padding: 4%;
+}
+#white_part {
+  width: 88%;
+  background-color: white;
+  border-radius: 0.8em;
+}
+#white_part > div {
+  padding: 3% 6%;
+}
+h1{
+  font-family: "thin";
+  font-weight: 100;
+  text-align: center;
+  font-size: 27px;
+}
+.notice{
+  font-family: "pro-light";
+  font-size:17px;
+  color:red;
+  margin:1%;
+  display: none;
+}
+h1>#p{
+  font-size: 16px;
+}
+form input,form select{
+  width: 44%;
+  font-size: 18px;
+  padding: 1.7%;
+  border: 1px solid #dadee3;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  font-family: "pro-light";
+  color: #65686b;
+  margin:1.3% 0 1.3% 0 ;
+}
+#password{
+  display:flex;
+  justify-content: space-between;
+}
+.flname{
+  width: 105%;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+.flname *{
+  width: 91.8%;
+}
+.flname input{
+  padding: 3.6%;
+}
+label{
+  font-family: "pro-light";
+  color: #65686b;
+  font-size: 18px;
+}
+#checkbox> .check{
+  width: min-content;
+}
+.privacy{
+  font-family: "pro-light";
+  font-size: 15px;
+}
+.highlight{
+  color:#006DA8;
+}
+#btn {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  place-items: center;
+  justify-content: space-between;
+  padding: 4% 0 4% 0;
+}
+#btn > a {
+  font-family: "pro-light";
+  color: #006da8;
+  font-weight: bold;
+  text-decoration: none;
+}
+#btn button {
+  border: none;
+  background-color: #116da8;
+  color: white;
+  border-radius: 3em;
+  font-size: 15px;
+  padding: 2.5% 4%;
+  font-family: "pro-light";
+  font-weight: bold;
+}
+input:focus {
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 1px 4px;
+  outline: 1px solid #30cae6;
+  transition: ease-in 0.15s;
+}
+#faq {
+  font-family: "pro-light";
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 2%;
+}
+#faq:hover,
+#btn > a:hover {
+  color: #003b5c;
+  transition: ease-in 0.2s;
+  cursor: pointer;
+}
+#btn > button:hover {
+  background-color: #003b5c;
+}
+ul {
+  font-family: "pro-light";
+  width: 75%;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 8%;
+  font-size: 15px;
+}
+ul li:nth-child(2):hover,
+ul li:nth-child(3):hover {
+  color: #17a2b8;
+  cursor: pointer;
+}

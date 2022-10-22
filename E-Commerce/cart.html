@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      table {
+        height: min-content;
+        font-size: 25px;
+        margin-top: 20px;
+        border-radius: 1em;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+          rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+          rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+          rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        margin-bottom: 10px;
+      }
+      th {
+        border: 2px solid;
+        text-align: center;
+        border-radius: 1em;
+        padding: 15px;
+      }
+      td {
+        padding: 15px;
+      }
+      #main {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      #container {
+        margin-top: 20px;
+      }
+      #container > div {
+        display: flex;
+        width: 90%;
+        border: 2px solid;
+        padding: 10px;
+        border-radius: 1em;
+        overflow: hidden;
+        justify-content: space-between;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+          rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+          rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+          rgba(0, 0, 0, 0.07) 0px 32px 64px;
+      }
+      button,
+      h3,
+      h4 {
+        height: min-content;
+        margin: auto;
+      }
+      button {
+        padding: 10px 30px;
+        font-size: 18px;
+        border: 2px solid;
+        background-color: white;
+        border-radius: 5em;
+      }
+      h4::before {
+        content: "\20B9\0020";
+      }
+      #container > div div:first-child {
+        width: 15%;
+      }
+      img {
+        width: 100%;
+      }
+      input {
+        padding: 10px;
+        font-size: 20px;
+      }
+      #header {
+        display: grid;
+        text-align: center;
+        padding: 10px;
+        gap: 10px;
+        margin-bottom: 10px;
+        border-radius: 1em;
+        grid-template-columns: repeat(4, 1fr);
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+          rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+          rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+          rgba(0, 0, 0, 0.07) 0px 32px 64px;
+      }
+      a {
+        text-decoration: none;
+        color:black;
+      }
+      #bottom>div{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 30px;
+      }
+      input{
+        border-radius: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header" style="grid-template-columns: 1fr 1fr 1fr ">
+      <a href="./index.html"><h1>Mens</h1></a>
+      <a href="./women.html"><h1>Womens</h1></a>
+      <a href="./cart.html"><h1>Cart</h1></a>
+    </div>
+    <div id="main">
+      <div id="container"></div>
+      <div id="bottom">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">Cart items Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+      
+          </tbody>
+        </table>
+        <div class="first"></div>
+        <div class="second"></div>
+  
+      </div>
+    </div>
+  </body>
+  <script>
+    function empty(arr){
+      let x = document.createElement("h1");
+      x.innerText = "Your Cart is Empty!";
+      document.querySelector("body").append(x);
+      x.style.textAlign="center";
+      document.querySelector("table").style.display="none";
+      document.querySelector(".first").style.display="none";
+      document.querySelector(".second").style.display="none";
+    }
+    let arr = JSON.parse(localStorage.getItem("cart_items")) || 0;
+    if (arr == 0) {
+      empty(arr);
+    } else {
+      let sum = 0;
+      let count=0;
+      arr.forEach((e, i) => {
+        let div = document.createElement("div");
+        div.style.marginBottom = "20px";
+        let img_div = document.createElement("div");
+        let image = document.createElement("img");
+        image.src = e.image_src;
+        img_div.append(image);
+
+        let item_name = document.createElement("h3");
+        item_name.innerText = e.item_name;
+
+        let price = document.createElement("h4");
+        price.innerText = e.price;
+        sum += +e.price;
+
+        let btn = document.createElement("button");
+        btn.innerText = "Delete";
+        btn.addEventListener("click", (e, i)=>{
+          e.target.parentNode.remove();
+          arr.splice(i, 1);
+          let x=arr.reduce((sum,e)=>sum+(+e.price),0)
+          localStorage.setItem("cart_items", JSON.stringify(arr));
+          document.querySelector("tbody tr:first-child td:last-child").innerText=arr.length;
+          document.querySelector("tbody tr:last-child td:last-child").innerText=x;
+          if(arr.length==0){
+            empty(arr);
+          }
+        });
+
+        div.append(img_div, item_name, price, btn);
+        document.querySelector("#container").append(div);
+
+      });
+      
+      let table=document.querySelector("tbody");
+        let tr=document.createElement("tr");
+        tr.innerHTML="<td>Total Number of Items</td><td>"+arr.length+"</td>"
+        let tr1=document.createElement("tr");
+        tr1.innerHTML="<td>Total Price</td><td>"+sum+"</td>";
+      table.append(tr,tr1);
+
+      let box=document.createElement("input");
+      box.placeholder="Enter Promo Code";
+      let btn2=document.createElement("button");
+      btn2.innerText="Apply";
+      document.querySelector("#bottom .first").append(box,btn2);
+      
+      let new_tr1=document.createElement("tr");
+      let new_td1=document.createElement("td");
+      let new_td2=document.createElement("td");
+
+      btn2.addEventListener("click",e=>{
+        if(box.value=="code30"){
+          let sub=document.querySelector("tbody tr:nth-child(2) td:last-child");
+          sub.style.textDecoration="line-through";
+          new_td1.innerText="New Price";
+          new_td2.innerText=(+sub.innerText)-((+sub.innerText)*30/100);
+          new_tr1.append(new_td1,new_td2);
+          document.querySelector("tbody").append(new_tr1);
+          btn2.setAttribute('disabled','disabled');
+          count=1;
+        }
+      })
+
+      let last_btn=document.createElement("button");
+      last_btn.innerText="Continue";
+      document.querySelector("#bottom .second").append(last_btn);
+      last_btn.addEventListener("click",e=>{
+        if(count==1){
+          localStorage.setItem("final_pay",new_td2.innerText);
+          window.location.href="otp.html";
+          alert("You have to pay  "+new_td2.innerText);
+        }else{
+          localStorage.setItem("final_pay",sum);
+          window.location.href="otp.html";
+          alert("You have to pay  "+sum);
+        }
+      });
+      
+    }
+   
+  </script>
+</html>

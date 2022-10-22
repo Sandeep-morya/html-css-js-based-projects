@@ -1,0 +1,47 @@
+#description,#contact{
+    width: 80%;
+    margin: auto;
+    padding-top: 1.5%;
+}
+#contact{
+    width: 77%;
+}
+#check{
+    float: left;
+}
+#contact{
+    display: flex;
+    padding: 1% 0 18% 0;
+}
+#contact form{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:5%;
+}
+#contact img{
+    width: 65%;
+}
+#contact input{
+    padding: 3%;
+    background-color: #FAFAFA;
+    border: 1px solid #eaeaea;
+    font-size: 16px;
+}
+#contact button{
+    padding: 4%;
+    border: none;
+    background-color: #d7282f;
+    color:white;
+    font-size: 13px;
+    border-radius: 3em;
+    width: 40%;
+}
+#contact>form>div{
+    line-height: 155%;
+}
+#part_2{
+    line-height: 150%;
+}
+#contact h1{
+    font-size: 25px;
+}

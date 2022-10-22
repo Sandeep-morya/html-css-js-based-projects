@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+*{
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Quicksand';
+  transition: all 0.5s;
+  background-attachment: fixed;
+  
+}
+body {
+	background: linear-gradient(-45deg, #e73c7e, #3589e9ea, #23d5ab, #2bff00);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+input::placeholder{
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Quicksand';
+  font-size: 18px;
+}
+
+#grid {
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+#grid>div{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  position: relative;
+}
+#grid img{
+  width: 70%; 
+  cursor:alias;
+}
+.fa-download:hover{
+  color:white;
+}
+.name{
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  bottom:5%;
+  cursor:default;
+}
+.name:hover{
+  color:white;
+
+}
+.fa-download{
+  top: 28%;
+  left:21%;
+  color: rgb(255, 255, 255,0.6);
+  position: absolute;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus{
+  border: 1px solid rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: rgb(0, 0, 0);
+  box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+

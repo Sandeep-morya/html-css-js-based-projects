@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "sans_light";
+  src: url(../Fonts/sans_light.ttf);
+}
+::selection {
+  background-color: #d7282f;
+  color: white;
+}
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+body::-webkit-scrollbar{
+  width: 10px;
+  background-image: linear-gradient(#d7282f,#3d7cc9);
+}
+body::-webkit-scrollbar-thumb{
+  width: 50%;
+  background-color: white;
+  border-radius: 3em;
+  height: 20px;
+}
+h1 {
+  font-family: "sans_light";
+  font-weight: lighter;
+}
+button {
+  cursor: pointer;
+  transition: ease-in 0.2s;
+}
+#header {
+  width: 65%;
+  margin: auto;
+  padding-top: 0.5%;
+}
+#header > * {
+  padding: 1%;
+}
+.span {
+  border-bottom: 3px solid #d7282f;
+  padding-bottom: 3%;
+}
+a {
+  text-decoration: none;
+}
+#navbar a {
+  color: black;
+}
+#logo {
+  display: flex;
+  justify-content: center;
+}
+#navbar {
+  display: flex;
+  justify-content: space-around;
+}
+#navbar *:hover {
+  color: red;
+  cursor: pointer;
+}
+#navbar img {
+  width: 2%;
+}
+.highlight {
+  color: #3d7cc9;
+  cursor: pointer;
+}
+.dark{
+  font-weight: bold;
+}
+#description p{
+  padding-top: 1.5%;
+  line-height: 160%;
+}

@@ -1,0 +1,9 @@
+document.querySelector("button").addEventListener("mouseover",e=>{
+    document.querySelector(".tick").style.filter="invert(1%)";
+    document.querySelector(".tick").style.fill="#ffd400";
+    document.querySelector("button>p").style.color="#ffd400";
+});
+document.querySelector("button").addEventListener("mouseout",e=>{
+    document.querySelector(".tick").style.fill="white";
+    document.querySelector("button>p").style.color="white";
+});

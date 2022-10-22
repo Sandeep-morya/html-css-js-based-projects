@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>localStorage_We</title>
+    <style>
+      #container {
+        width: 30%;
+        margin: auto;
+        display: grid;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+        border-radius: 5em;
+        margin-top: 5%;
+        overflow: hidden;
+        grid-template-columns: 1fr;
+      }
+      img {
+        width: 100%;
+      }
+      #container img:first-child {
+        grid-column: span 2;
+      }
+      #reactions {
+        display: flex;
+        background-color: white;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+      h1 {
+        font-size: 50px;
+        padding: 20px;
+        border-radius: 5em;
+        user-select: none;
+        cursor: pointer;
+      }
+      span {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+      }
+      @media only screen and (min-width: 200px) and (max-width: 459px) {
+    body{
+        margin-top: 5%;
+    }
+    #container{
+        width: 95%;
+        margin: auto;
+    }
+    
+}
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <img
+        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/01730220-fb61-4875-9e4d-e0ef35e9b095/d2o7dxp-f21c69e0-d4bf-49ca-aca5-2e31504efc6a.jpg/v1/fill/w_900,h_675,q_75,strp/random_puppy_by_flora_the_awesome_d2o7dxp-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Njc1IiwicGF0aCI6IlwvZlwvMDE3MzAyMjAtZmI2MS00ODc1LTllNGQtZTBlZjM1ZTliMDk1XC9kMm83ZHhwLWYyMWM2OWUwLWQ0YmYtNDljYS1hY2E1LTJlMzE1MDRlZmM2YS5qcGciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.WAgs3KTMosB0EUTaoUVFLHhfJfNY5w-YYhSXxN14rik"
+        alt=""
+      />
+      <div id="reactions">
+        <h1>👍<span id="likes_count"></span></h1>
+        <h1>👎<span id="dislikes_count"></span></h1>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let likes = localStorage.getItem("total_likes");
+  let dislikes = localStorage.getItem("total_dislikes");
+
+  /*----------------------- 😁 Code start --------------------*/
+  let like = document.querySelector("#likes_count");
+  like.innerText = likes;
+  let dislike = document.querySelector("#dislikes_count");
+  dislike.innerText = dislikes;
+
+  /*----------------------- LIke Manage --------------------*/
+  document
+    .querySelector("#reactions h1:first-child")
+    .addEventListener("click", likeManage);
+  function likeManage(e) {
+    likes++;
+    like.innerText = likes;
+    localStorage.setItem("total_likes", like.innerText);
+  }
+
+  /*----------------------- Dislike Manage --------------------*/
+  document
+    .querySelector("#reactions h1:last-child")
+    .addEventListener("click", dislikeManage);
+  function dislikeManage() {
+    dislikes++;
+    dislike.innerText = dislikes;
+    localStorage.setItem("total_dislikes", dislike.innerText);
+  }
+  //localStorage.clear();
+
+</script>

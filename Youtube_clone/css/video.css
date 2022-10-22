@@ -1,0 +1,32 @@
+.content_main{
+    padding-top: 13vh;
+    width: 82%;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.vdetails{
+    width: 60%;
+    position: fixed;
+    top:13vh;
+}
+.iframe,.info,.vtitle,.cname{
+    width: 100%;
+}
+.iframe{
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border: none;
+}
+.info{
+    height: 15vh;
+    color:white;
+    margin-top:1vh;
+}
+.vtitle{
+    font-size: 18px;
+}
+.cname{
+    height: 5vh;
+}

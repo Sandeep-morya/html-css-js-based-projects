@@ -1,0 +1,83 @@
+#first_div,#partner_grid{
+    width: 80%;
+    margin: auto;
+    padding: 1%;
+}
+.span{
+    padding-bottom: 5%;
+}
+#first_div>p{
+    padding-top: 2%;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    text-align:justify;
+}
+#partner_grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    padding-bottom: 8%;
+}
+.type_1{
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 2%;
+    gap: 2%;
+}
+#partner_grid img{
+    width: 100%;
+    margin: auto;
+}
+#partner_grid>*{
+    border: 1px solid;
+}
+.type_1 button{
+    grid-column: span 2;
+    width: 23%;
+    margin: auto;
+    padding: 1.8%;
+}
+#partner_grid p{
+    line-height: 150%;
+}
+h1{
+    font-size: 25px;
+}
+.font-fam{
+    font-size:23px;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+h2{
+    font-size: 18px;
+}
+.type_2{
+    padding: 0 7% 7% 7%; 
+    display: grid;
+    place-content: center;
+}
+.type_2 img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.type_3{
+    padding:0 10% 10% 10%;
+    display: grid;
+    place-content: center;
+}
+.type_3 #bigImage{
+    width: 50%;
+}
+#partner_grid button{
+    font-size: 18px;
+    border: none;
+    background-color: #d7282f;
+    color: white;  
+    border-radius: 0.5em;
+}
+#partner_grid .type_2 button,#partner_grid .type_3 button{
+    padding: 7% 10%;
+    margin: auto;
+}

@@ -1,0 +1,60 @@
+#description {
+  width: 79%;
+  margin: auto;
+  padding: 1.5%;
+}
+#look {
+  width: 80%;
+  margin: auto;
+}
+#look h1 {
+  font-size: 25px;
+}
+#laptop,
+#iphone,
+#iphone_2 {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 4%;
+}
+#laptop img {
+  width: 48%;
+}
+#laptop > div {
+  width: 49%;
+}
+#iphone img {
+  width: 30%;
+}
+#iphone > div {
+  width: 60%;
+}
+
+#iphone_2 img {
+  width: 28%;
+}
+#iphone_2 > div {
+  width: 43%;
+}
+.orange:empty {
+  width: 15%;
+  background-color: orange;
+  height: 3px;
+  margin-bottom: 2%;
+}
+.green:empty {
+  width: 15%;
+  background-color: green;
+  height: 3px;
+  margin-bottom: 3%;
+}
+p,
+li {
+  line-height: 150%;
+}
+ul{
+    padding-top: 1%;
+}
+#iphone_2{
+    padding-bottom: 13%;
+}

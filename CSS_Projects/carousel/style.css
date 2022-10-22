@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 96vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.carousel{
+   position: relative; 
+   width: 100%;
+   display: flex;
+   overflow: hidden;
+}
+.slider{
+    min-width: 85%;
+    margin: auto;
+    height: 60vh;
+    border-radius: 2em;
+    overflow: hidden;
+    transition: all 1s;
+   
+}
+.slider>img{
+    width: 98%;
+    border-radius: 2em;
+    transition: all 1s;
+}

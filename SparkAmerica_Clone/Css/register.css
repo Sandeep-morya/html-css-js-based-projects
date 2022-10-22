@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "pro-light";
+  src: url(../Fonts/pro_light.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow-x: hidden;
+}
+body > img {
+  width: max-content;
+}
+#content {
+  width: 48%;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  left: 27%;
+}
+#content > img {
+  width: 100%;
+  padding: 5%;
+}
+#content > div {
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  border-radius: 1em;
+  padding: 6% 8% 6% 8%;
+  font-family: "pro-light";
+}
+#recap {
+  width: 60%;
+  cursor: pointer;
+}
+#content > div > p {
+  width: 95%;
+  line-height: 140%;
+}
+label {
+  font-size: 21px;
+  color: #45484b;
+  line-height: 220%;
+}
+input {
+  font-size: 18px;
+  width: 100%;
+  padding: 2%;
+  border: 1px solid #dadee3;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  font-family: "pro-light";
+  color: #65686b;
+}
+input:focus {
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 1px 4px;
+  outline: 1px solid #30cae6;
+  transition: ease-in 0.15s;
+}
+input + p {
+  margin-top: 0.5%;
+}
+#inv {
+  width: 100%;
+  visibility: hidden;
+}
+#captcha {
+  margin-top:-1%;
+  font-size: 18px;
+  visibility: hidden;
+}
+#note {
+  color: #35383b;
+  font-size: 17px;
+}
+#btn {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4%;
+}
+#btn > a {
+  color: #006da8;
+  font-weight: bold;
+}
+
+#btn button {
+  font-family: "pro-light";
+  border: none;
+  background-color: #116da8;
+  color: white;
+  border-radius: 3em;
+  font-size: 15px;
+  padding: 3% 4%;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+#faq {
+  font-family: "pro-light";
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 2%;
+}
+#faq:hover,
+#btn > a:hover {
+  color: #003b5c;
+  transition: ease-in 0.2s;
+  cursor: pointer;
+}
+#btn > button:hover {
+  background-color: #003b5c;
+}
+ul {
+  width: 75%;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 18%;
+  font-size: 15px;
+}
+ul li:nth-child(2):hover,
+ul li:nth-child(3):hover {
+  color: #17a2b8;
+  cursor: pointer;
+}
