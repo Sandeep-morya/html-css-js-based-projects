@@ -20,7 +20,7 @@ function showFolders(array){
       name.textContent = e.title;
       name.className='name';
 
-      icon.onclick = () => {location.href = `./${e.path}/index.html`};
+      icon.onclick = () => {location.href = `./${e.path}`};
       let download=document.createElement('i');
       download.className='fa-solid fa-download';
       download.onclick=() => {
