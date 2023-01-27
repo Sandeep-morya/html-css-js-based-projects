@@ -1,71 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My - Projects</title>
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/meilisearch/integration-guides/main/assets/logos/meilisearch_js.svg" type="image/x-icon">
-    <link rel="stylesheet" href="./src/style.css">
-    <link rel="stylesheet" href="./src/auth.css">
-    <link rel="stylesheet" href="./src/loader.css">
-    <link rel="stylesheet" href="./src/navbar.css">
-  </head>
-  <body>
-   
-    <section id="login_page">
-      <div class="text_part">
-        <i class="fa-sharp fa-solid fa-xmark"></i>
-      <h2>To Download the Project Files, You Need to Sign-in First !</h2>
-      </div>
-      <form>
-        <h2 class="message">LOGIN</h2>
-        <div id="email">
-          <input type="text"  placeholder="Email Address" required/>
-          <i class="fa-sharp fa-solid fa-user"></i>
-        </div>
-        
-          <div id="pass">
-            <input type="password"  placeholder="Enter Password" accept="#"/>
-            <i class="fa-solid fa-key"></i>
-          </div>
-          
-         
-        <input id="submit" type="submit" value="&#10003;">
-      </form>
-    </section>
-    <section id="navbar">
-      <div class="user">
-        <div class="user_dp"></div>
-        <div class="user_info">
-          <span class="user_name">Sandeep Morya</span>
-          <span class="user_des">saabmaurya@gmail.com</span>
-          <span class="user_des"><i class="fa-solid fa-code"></i> &nbsp;Projects</span>
-        </div>
-      </div>
-      <div class="find_f">
-        <div class="search">
-          <i class="fa-solid fa-magnifying-glass search_btn"></i><span>|</span>
-          <input class="search_bar" type="search" placeholder="Search Folder">
-        </div>
-        <div class="contact">
-          <i class="fa-brands fa-github g"></i>
-          <i class="fa-brands fa-linkedin l"></i>
-          <i class="fa-brands fa-instagram i"></i>
-          <i class="fa-brands fa-facebook f"></i>
-          <i class="fa-brands fa-whatsapp w"></i>
-          <i class="fa-brands fa-telegram t"></i>
-        </div>
-      </div>
-      
-    </section>
-    <section id="loader"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></section>
-    <div id="grid"></div>
-  </body>
-<script type="module" src="./src/script.js"></script>
-<script src="./src/auth.js"></script>
-<script
-      src="https://kit.fontawesome.com/6f51b9c2b0.js"
-      crossorigin="anonymous"
-    ></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My - Projects</title>
+		<link
+			rel="shortcut icon"
+			href="https://raw.githubusercontent.com/meilisearch/integration-guides/main/assets/logos/meilisearch_js.svg"
+			type="image/x-icon" />
+		<link rel="stylesheet" href="./src/style.css" />
+		<link rel="stylesheet" href="./src/auth.css" />
+		<link rel="stylesheet" href="./src/loader.css" />
+		<link rel="stylesheet" href="./src/navbar.css" />
+	</head>
+	<body>
+		<section id="login_page">
+			<div class="text_part">
+				<i class="fa-sharp fa-solid fa-xmark"></i>
+				<h2>To Download the Project Files, You Need to Sign-in First !</h2>
+			</div>
+			<form>
+				<h2 class="message">LOGIN</h2>
+				<div id="email">
+					<input type="text" placeholder="Email Address" />
+					<i class="fa-sharp fa-solid fa-user"></i>
+				</div>
+
+				<div id="pass">
+					<input type="password" placeholder="Enter Password" accept="#" />
+					<i class="fa-solid fa-key"></i>
+				</div>
+
+				<input id="submit" type="submit" value="&#10003;" />
+			</form>
+		</section>
+		<section id="navbar">
+			<div class="user">
+				<div class="user_dp"></div>
+				<div class="user_info">
+					<span class="user_name">Sandeep Morya</span>
+					<span class="user_des">saabmaurya@gmail.com</span>
+					<span class="user_des"
+						><i class="fa-solid fa-code"></i> &nbsp;Projects</span
+					>
+				</div>
+			</div>
+			<div class="find_f">
+				<div class="search">
+					<i class="fa-solid fa-magnifying-glass search_btn"></i><span>|</span>
+					<input class="search_bar" type="search" placeholder="Search Folder" />
+				</div>
+				<div class="contact">
+					<i class="fa-brands fa-github g"></i>
+					<i class="fa-brands fa-linkedin l"></i>
+					<i class="fa-brands fa-instagram i"></i>
+					<i class="fa-brands fa-facebook f"></i>
+					<i class="fa-brands fa-whatsapp w"></i>
+					<i class="fa-brands fa-telegram t"></i>
+				</div>
+			</div>
+		</section>
+		<section id="loader">
+			<div class="lds-roller">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</section>
+		<div id="grid"></div>
+	</body>
+	<script type="module" src="./src/script.js"></script>
+	<script src="./src/auth.js"></script>
+	<script
+		src="https://kit.fontawesome.com/6f51b9c2b0.js"
+		crossorigin="anonymous"></script>
 </html>
