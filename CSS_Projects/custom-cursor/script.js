@@ -16,7 +16,7 @@ root.addEventListener("mousemove", (e) => {
 });
 
 function setPosition(element, e) {
-	element.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+	element.style.transform = `perspective(500px) translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
 }
 
-const heading = document.querySelector('h1');
+const heading = document.querySelector("h1");
