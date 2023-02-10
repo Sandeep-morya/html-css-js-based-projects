@@ -18,7 +18,7 @@ body {
 	font-weight: bold;
 	color: rgba(255, 255, 255, 0.3);
 	letter-spacing: 0.1cm;
-
+	height: 200vh;
 }
 
 .cursor {
@@ -32,8 +32,8 @@ body {
 	box-shadow:  0px 5px 30px #0ff
 }
 
-.cursor__follower {
-	transition: transform 0.4s;
+.follower {
+	transition: transform 0.3s;
 	width: 6px;
 	height: 6px;
 }

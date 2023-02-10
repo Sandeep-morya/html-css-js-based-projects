@@ -7,15 +7,12 @@ root.appendChild(cursor);
 
 // Following extra cursor element
 const follower = document.createElement("div");
-follower.classList.add("cursor", "cursor__follower");
+follower.classList.add("cursor", "follower");
 root.appendChild(follower);
 
 root.addEventListener("mousemove", (e) => {
-	console.log(e);
-	setPosition(follower, e);
-	setPosition(cursor, e);
+	cursor.style.transform = `translate3d(${e.layerX - 10}px, ${e.layerY}px, 0)`;
+	follower.style.transform = `translate3d(${e.layerX - 10}px, ${
+		e.layerY
+	}px, 0)`;
 });
-
-function setPosition(element, e) {
-	element.style.transform = `perspective(500px) translate3d(${e.layerX-10}px, ${e.layerY}px, 0)`;
-}
