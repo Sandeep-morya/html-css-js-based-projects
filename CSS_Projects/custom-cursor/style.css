@@ -3,10 +3,10 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	cursor: none;
 }
 html {
-	background: #112;
-	cursor: none;
+	background: #222;
 }
 body {
 	width: 100%;
@@ -18,8 +18,7 @@ body {
 	font-weight: bold;
 	color: rgba(255, 255, 255, 0.3);
 	letter-spacing: 0.1cm;
-	user-select: none;
-  overflow: hidden;
+
 }
 
 .cursor {
@@ -27,9 +26,10 @@ body {
 	top: 0;
 	width: 10px;
 	height: 10px;
-	background-color: white;
+	background-color: #0ff;
 	position: absolute;
 	border-radius: 5px;
+	box-shadow:  0px 5px 30px #0ff
 }
 
 .cursor__follower {

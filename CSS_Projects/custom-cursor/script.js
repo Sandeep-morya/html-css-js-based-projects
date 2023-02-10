@@ -11,12 +11,11 @@ follower.classList.add("cursor", "cursor__follower");
 root.appendChild(follower);
 
 root.addEventListener("mousemove", (e) => {
+	console.log(e);
 	setPosition(follower, e);
 	setPosition(cursor, e);
 });
 
 function setPosition(element, e) {
-	element.style.transform = `perspective(500px) translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+	element.style.transform = `perspective(500px) translate3d(${e.layerX-10}px, ${e.layerY}px, 0)`;
 }
-
-const heading = document.querySelector("h1");
