@@ -156,9 +156,23 @@ export let folders = [
 	},
 	{
 		level: 22,
-		path: `https://advance-facebook-clone.vercel.app/login`,
+		path: `https://advance-facebook-clone.vercel.app/`,
 		title: `Facebook clone`,
 		name: `auraly`,
+		url: `https://github.com/Sandeep-morya/Facebook_clone/archive/refs/heads/main.zip`,
+	},
+	{
+		level: 12,
+		path: `https://helpful-sopapillas-f1f470.netlify.app`,
+		title: `Clock`,
+		name: `clock`,
+		url: `https://github.com/Sandeep-morya/Facebook_clone/archive/refs/heads/main.zip`,
+	},
+	{
+		level: 12,
+		path: `https://legendary-gnome-5b5042.netlify.app`,
+		title: `Tic Tac Toe`,
+		name: `tictactoe`,
 		url: `https://github.com/Sandeep-morya/Facebook_clone/archive/refs/heads/main.zip`,
 	},
 ];
